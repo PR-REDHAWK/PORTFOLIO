@@ -17,6 +17,6 @@ export const siteConfig: SiteConfig = {
   tagline: "Engineering resilient systems and cinematic digital experiences.",
   description:
     "This portfolio is an evolving cinematic web experience inspired by modern architectural forms and the Malevolent Shrine aesthetic. Currently under deliberate phased construction.",
-  status: "PHASE 1 / FOUNDATION",
+  status: "PHASE 2 / SHRINE HERO",
   year: 2026,
 };
