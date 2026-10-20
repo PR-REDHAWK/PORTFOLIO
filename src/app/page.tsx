@@ -61,11 +61,11 @@ export default function Home() {
 
               <div className="pt-2 flex items-center gap-3">
                 <span className="font-mono text-xs tracking-wider text-accent-crimson uppercase font-medium">
-                  Phase 02
+                  Phase 03
                 </span>
                 <span className="text-border">/</span>
                 <span className="font-mono text-xs tracking-wider text-text-secondary uppercase">
-                  Shrine Hero & Scroll-to-Enter Integrated
+                  Cinematic Shrine Scroll Transition Active
                 </span>
               </div>
             </div>
