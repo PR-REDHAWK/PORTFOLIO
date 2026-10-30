@@ -126,18 +126,29 @@ export function Header() {
 
           {/* Resume Action */}
           <div className="pl-4 border-l border-border/60">
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              className="font-mono text-xs tracking-[0.18em] uppercase px-3.5 py-1.5 border border-border/60 bg-background-elevated/40 text-text-secondary/40 cursor-not-allowed flex items-center gap-2 rounded-[1px]"
-              title="Resume PDF will be available soon"
-            >
-              <span>Resume</span>
-              <span className="text-[9px] px-1 py-0.2 bg-background-elevated border border-border/40 text-text-secondary/40 rounded-[1px]">
-                Soon
-              </span>
-            </button>
+            {siteConfig.contact.resume.isAvailable ? (
+              <a
+                href={siteConfig.contact.resume.path}
+                download="Priyanshu_Panwar_Resume.pdf"
+                className="font-mono text-xs tracking-[0.18em] uppercase px-3.5 py-1.5 border border-accent-crimson bg-accent-crimson/10 text-text-primary hover:bg-accent-crimson hover:text-white transition-colors flex items-center gap-2 rounded-[1px] focus:outline-hidden focus-visible:ring-1 focus-visible:ring-accent-crimson"
+              >
+                <span>Resume</span>
+                <span className="text-accent-crimson">↓</span>
+              </a>
+            ) : (
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="font-mono text-xs tracking-[0.18em] uppercase px-3.5 py-1.5 border border-border/60 bg-background-elevated/40 text-text-secondary/40 cursor-not-allowed flex items-center gap-2 rounded-[1px]"
+                title="Resume PDF pending publication"
+              >
+                <span>Resume</span>
+                <span className="text-[9px] px-1 py-0.2 bg-background-elevated border border-border/40 text-text-secondary/40 rounded-[1px]">
+                  Soon
+                </span>
+              </button>
+            )}
           </div>
         </nav>
 
@@ -210,17 +221,28 @@ export function Header() {
           </nav>
 
           <div className="pt-6 border-t border-border/40 space-y-4">
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              className="w-full font-mono text-xs tracking-[0.18em] uppercase py-3 border border-border/60 bg-background-elevated/40 text-text-secondary/40 cursor-not-allowed flex items-center justify-center gap-2 rounded-[1px]"
-            >
-              <span>Resume</span>
-              <span className="text-[9px] px-1.5 py-0.5 bg-background-elevated border border-border/40 text-text-secondary/40 rounded-[1px]">
-                Coming Soon
-              </span>
-            </button>
+            {siteConfig.contact.resume.isAvailable ? (
+              <a
+                href={siteConfig.contact.resume.path}
+                download="Priyanshu_Panwar_Resume.pdf"
+                className="w-full font-mono text-xs tracking-[0.18em] uppercase py-3 border border-accent-crimson bg-accent-crimson text-white flex items-center justify-center gap-2 rounded-[1px]"
+              >
+                <span>Download Resume</span>
+                <span>↓</span>
+              </a>
+            ) : (
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="w-full font-mono text-xs tracking-[0.18em] uppercase py-3 border border-border/60 bg-background-elevated/40 text-text-secondary/40 cursor-not-allowed flex items-center justify-center gap-2 rounded-[1px]"
+              >
+                <span>Resume</span>
+                <span className="text-[9px] px-1.5 py-0.5 bg-background-elevated border border-border/40 text-text-secondary/40 rounded-[1px]">
+                  Coming Soon
+                </span>
+              </button>
+            )}
 
             <div className="flex items-center justify-between text-[11px] font-mono text-text-secondary/60 pt-2">
               <span>{siteConfig.role}</span>

@@ -5,6 +5,25 @@ export interface NavItem {
   tag?: string;
 }
 
+export interface SocialLink {
+  platform: string;
+  label: string;
+  url: string | null;
+  username?: string;
+  isAvailable: boolean;
+  note?: string;
+}
+
+export interface ContactConfig {
+  email: string | null;
+  location: string;
+  socials: SocialLink[];
+  resume: {
+    path: string;
+    isAvailable: boolean;
+  };
+}
+
 export interface SiteConfig {
   name: string;
   eyebrow: string;
@@ -14,6 +33,7 @@ export interface SiteConfig {
   description: string;
   status: string;
   year: number;
+  contact: ContactConfig;
   education: {
     degree: string;
     field: string;
@@ -33,8 +53,33 @@ export const siteConfig: SiteConfig = {
   tagline: "Engineering resilient systems and cinematic digital experiences.",
   description:
     "Developer focused on building practical web software, exploring modern systems engineering, and solving complex algorithmic challenges.",
-  status: "PHASE 7 / ARSENAL ACTIVE",
+  status: "PHASE 8 / CONTACT & FOOTER COMPLETE",
   year: 2026,
+  contact: {
+    email: "arpitpriyanshupanwar098@gmail.com",
+    location: "Ghaziabad, Uttar Pradesh, India",
+    socials: [
+      {
+        platform: "GitHub",
+        label: "GitHub",
+        url: "https://github.com/PR-REDHAWK",
+        username: "PR-REDHAWK",
+        isAvailable: true,
+      },
+      {
+        platform: "LinkedIn",
+        label: "LinkedIn",
+        url: null, // Configurable placeholder: e.g. "https://www.linkedin.com/in/priyanshu-panwar"
+        username: "Priyanshu Panwar",
+        isAvailable: false,
+        note: "Profile link on request",
+      },
+    ],
+    resume: {
+      path: "/resume.pdf",
+      isAvailable: false, // Set to true once public/resume.pdf is provided
+    },
+  },
   education: {
     degree: "B.Tech",
     field: "Computer Science and Engineering",
@@ -56,6 +101,6 @@ export const siteConfig: SiteConfig = {
     { label: "Projects", href: "/#projects", isAvailable: true },
     { label: "Achievements", href: "/#achievements", isAvailable: true },
     { label: "Skills", href: "/#skills", isAvailable: true },
-    { label: "Contact", href: "/#contact", isAvailable: false, tag: "Upcoming" },
+    { label: "Contact", href: "/#contact", isAvailable: true },
   ],
 };
