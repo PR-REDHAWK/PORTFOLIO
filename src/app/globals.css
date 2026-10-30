@@ -46,10 +46,10 @@ body {
   color: #FFFFFF;
 }
 
-/* Distinct scroll reveal transitions */
+/* Scroll reveal transitions */
 .reveal-init {
   opacity: 0;
-  transform: translateY(32px);
+  transform: translateY(28px);
   transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }

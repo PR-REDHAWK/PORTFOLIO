@@ -19,9 +19,7 @@ export function Reveal({
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // If IntersectionObserver not supported or on SSR, make visible
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
-      setIsVisible(true);
       return;
     }
 
