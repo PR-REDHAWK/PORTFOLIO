@@ -1,5 +1,6 @@
 import { projectsData } from "@/data/projects";
 import { ProjectCard } from "@/components/projects/ProjectCard";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function ProjectsSection() {
   const flagshipProject = projectsData.find((p) => p.isFlagship) || projectsData[0];
@@ -19,40 +20,48 @@ export function ProjectsSection() {
 
       <div className="max-w-6xl mx-auto w-full relative z-10">
         {/* Section Header Eyebrow */}
-        <div className="flex items-center gap-3 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-background-elevated">
-            <span
-              className="w-1.5 h-1.5 bg-accent-crimson rounded-[1px]"
-              aria-hidden="true"
-            />
-            <span className="font-mono text-xs tracking-[0.2em] uppercase text-text-secondary">
-              02 // Featured Projects
-            </span>
+        <Reveal>
+          <div className="flex items-center gap-3 mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 border border-border bg-background-elevated">
+              <span
+                className="w-1.5 h-1.5 bg-accent-crimson rounded-[1px]"
+                aria-hidden="true"
+              />
+              <span className="font-mono text-xs tracking-[0.2em] uppercase text-text-secondary">
+                02 // Featured Projects
+              </span>
+            </div>
+            <div className="h-px flex-1 bg-border/40 max-w-xs" />
           </div>
-          <div className="h-px flex-1 bg-border/40 max-w-xs" />
-        </div>
+        </Reveal>
 
         {/* Section Title & Subheading */}
-        <div className="mb-14 sm:mb-16 space-y-4 max-w-3xl">
-          <h2
-            id="projects-heading"
-            className="font-sans font-bold text-3xl sm:text-5xl md:text-6xl tracking-tight text-text-primary leading-[1.1]"
-          >
-            Engineering resilient systems, intelligent models, and practical tools.
-          </h2>
-          <div className="w-12 h-0.5 bg-accent-crimson" aria-hidden="true" />
-          <p className="font-mono text-xs sm:text-sm text-text-secondary tracking-wide uppercase">
-            Curated flagship and applied engineering systems
-          </p>
-        </div>
+        <Reveal delayMs={100}>
+          <div className="mb-14 sm:mb-16 space-y-4 max-w-3xl">
+            <h2
+              id="projects-heading"
+              className="font-sans font-bold text-3xl sm:text-5xl md:text-6xl tracking-tight text-text-primary leading-[1.1]"
+            >
+              Engineering resilient systems, intelligent models, and practical tools.
+            </h2>
+            <div className="w-12 h-0.5 bg-accent-crimson" aria-hidden="true" />
+            <p className="font-mono text-xs sm:text-sm text-text-secondary tracking-wide uppercase">
+              Curated flagship and applied engineering systems
+            </p>
+          </div>
+        </Reveal>
 
         {/* 1. Flagship Showcase: SentinelAI */}
-        <ProjectCard project={flagshipProject} />
+        <Reveal delayMs={150}>
+          <ProjectCard project={flagshipProject} />
+        </Reveal>
 
         {/* 2. Supporting Projects Grid: SecurePlay & Monsoon */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          {supportingProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {supportingProjects.map((project, idx) => (
+            <Reveal key={project.id} delayMs={200 + idx * 100}>
+              <ProjectCard project={project} />
+            </Reveal>
           ))}
         </div>
       </div>
