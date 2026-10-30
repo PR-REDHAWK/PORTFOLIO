@@ -1,3 +1,10 @@
+export interface NavItem {
+  label: string;
+  href: string;
+  isAvailable: boolean;
+  tag?: string;
+}
+
 export interface SiteConfig {
   name: string;
   eyebrow: string;
@@ -7,6 +14,15 @@ export interface SiteConfig {
   description: string;
   status: string;
   year: number;
+  education: {
+    degree: string;
+    field: string;
+    institution: string;
+    location: string;
+    graduationYear: number;
+  };
+  interests: string[];
+  navItems: NavItem[];
 }
 
 export const siteConfig: SiteConfig = {
@@ -16,7 +32,29 @@ export const siteConfig: SiteConfig = {
   location: "India",
   tagline: "Engineering resilient systems and cinematic digital experiences.",
   description:
-    "This portfolio is an evolving cinematic web experience inspired by modern architectural forms and the Malevolent Shrine aesthetic. Currently under deliberate phased construction.",
-  status: "PHASE 3 / CINEMATIC TRANSITION",
+    "Developer focused on building practical web software, exploring modern systems engineering, and solving complex algorithmic challenges.",
+  status: "PHASE 5 / FEATURED PROJECTS",
   year: 2026,
+  education: {
+    degree: "B.Tech",
+    field: "Computer Science and Engineering",
+    institution: "ABES Institute of Technology",
+    location: "Ghaziabad, Uttar Pradesh, India",
+    graduationYear: 2028,
+  },
+  interests: [
+    "Full-stack web development",
+    "AI-powered applications",
+    "Data structures and algorithms",
+    "Competitive programming",
+    "Open-source development",
+    "Building practical software products",
+  ],
+  navItems: [
+    { label: "Home", href: "/#hero", isAvailable: true },
+    { label: "About", href: "/#about", isAvailable: true },
+    { label: "Projects", href: "/#projects", isAvailable: true },
+    { label: "Achievements", href: "/#achievements", isAvailable: false, tag: "Upcoming" },
+    { label: "Contact", href: "/#contact", isAvailable: false, tag: "Upcoming" },
+  ],
 };

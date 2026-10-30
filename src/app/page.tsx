@@ -1,31 +1,37 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ShrineHero } from "@/components/intro/ShrineHero";
-import { ScrollProgress } from "@/components/intro/ScrollProgress";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { siteConfig } from "@/data/site";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-text-primary">
-      <ScrollProgress />
       <Header />
 
       <main className="flex-1 flex flex-col">
-        {/* Shrine Hero Opening Scene */}
+        {/* Static Shrine Hero (Section ID: hero) */}
         <ShrineHero />
 
-        {/* Foundation Portfolio Section */}
+        {/* Section 01: About (Section ID: about) */}
+        <AboutSection />
+
+        {/* Section 02: Featured Projects (Section ID: projects) */}
+        <ProjectsSection />
+
+        {/* Architecture & Future Sections Foundation (Section ID: portfolio) */}
         <section
           id="portfolio"
-          className="relative z-10 flex-1 flex flex-col justify-center px-6 py-24 sm:py-32 bg-background border-t border-border/40 scroll-mt-16"
+          className="relative z-10 flex-1 flex flex-col justify-center px-6 py-24 sm:py-32 bg-background border-t border-border/40 scroll-mt-20"
         >
-          {/* Subtle Ambient Crimson Glow at top of section */}
+          {/* Subtle Ambient Crimson Glow */}
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-32 bg-accent-crimson/5 blur-3xl pointer-events-none"
             aria-hidden="true"
           />
 
-          <div className="max-w-5xl mx-auto w-full relative z-10">
+          <div className="max-w-6xl mx-auto w-full relative z-10">
             {/* Eyebrow Label */}
             <div className="inline-flex items-center gap-2.5 px-3 py-1.5 mb-8 border border-border bg-background-elevated">
               <span
@@ -61,41 +67,55 @@ export default function Home() {
 
               <div className="pt-2 flex items-center gap-3">
                 <span className="font-mono text-xs tracking-wider text-accent-crimson uppercase font-medium">
-                  Phase 03
+                  Phase 05
                 </span>
                 <span className="text-border">/</span>
                 <span className="font-mono text-xs tracking-wider text-text-secondary uppercase">
-                  Cinematic Shrine Scroll Transition Active
+                  Featured Projects Showcase Active
                 </span>
               </div>
             </div>
 
-            {/* Technical Foundation Block */}
-            <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border max-w-2xl border border-border">
-              <div className="p-4 bg-background-elevated">
-                <p className="font-mono text-[10px] text-text-secondary uppercase tracking-widest mb-1">
-                  Domain Status
-                </p>
-                <p className="font-mono text-xs text-text-primary tracking-wide">
-                  Gate Unlocked · In Construction
-                </p>
-              </div>
-              <div className="p-4 bg-background-elevated">
-                <p className="font-mono text-[10px] text-text-secondary uppercase tracking-widest mb-1">
-                  Core Stack
-                </p>
-                <p className="font-mono text-xs text-text-primary tracking-wide">
-                  Next.js · TypeScript
-                </p>
-              </div>
-              <div className="p-4 bg-background-elevated">
-                <p className="font-mono text-[10px] text-text-secondary uppercase tracking-widest mb-1">
-                  Aesthetic Direction
-                </p>
-                <p className="font-mono text-xs text-text-primary tracking-wide flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 bg-accent-crimson inline-block" />
-                  Malevolent Shrine
-                </p>
+            {/* Prepared Future Section Anchors / Shells */}
+            <div className="mt-16 pt-12 border-t border-border/30">
+              <p className="font-mono text-[11px] text-text-secondary uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-accent-crimson inline-block" />
+                Upcoming Modules
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div id="achievements" className="p-5 border border-border/60 bg-background-elevated/40 scroll-mt-20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-mono text-[10px] text-accent-crimson uppercase tracking-widest">
+                      Section // 03
+                    </span>
+                    <span className="font-mono text-[9px] px-1.5 py-0.5 border border-border/60 text-text-secondary/70">
+                      In Queue
+                    </span>
+                  </div>
+                  <h3 className="font-mono text-sm text-text-primary uppercase tracking-wide">
+                    Achievements
+                  </h3>
+                  <p className="text-xs text-text-secondary/70 mt-1">
+                    Competitive programming milestones and recognitions.
+                  </p>
+                </div>
+
+                <div id="contact" className="p-5 border border-border/60 bg-background-elevated/40 scroll-mt-20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-mono text-[10px] text-accent-crimson uppercase tracking-widest">
+                      Section // 04
+                    </span>
+                    <span className="font-mono text-[9px] px-1.5 py-0.5 border border-border/60 text-text-secondary/70">
+                      In Queue
+                    </span>
+                  </div>
+                  <h3 className="font-mono text-sm text-text-primary uppercase tracking-wide">
+                    Contact & Links
+                  </h3>
+                  <p className="text-xs text-text-secondary/70 mt-1">
+                    Direct communications, GitHub, and professional links.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
