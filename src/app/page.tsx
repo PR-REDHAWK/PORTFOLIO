@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ShrineHero } from "@/components/intro/ShrineHero";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { AchievementsSection } from "@/components/sections/AchievementsSection";
 import { siteConfig } from "@/data/site";
 
 export default function Home() {
@@ -20,9 +21,12 @@ export default function Home() {
         {/* Section 02: Featured Projects (Section ID: projects) */}
         <ProjectsSection />
 
-        {/* Architecture & Future Sections Foundation (Section ID: portfolio) */}
+        {/* Section 03: Achievements & Competitive Programming (Section ID: achievements) */}
+        <AchievementsSection />
+
+        {/* Section 04 Foundation & Contact Placeholder (Section ID: contact) */}
         <section
-          id="portfolio"
+          id="contact"
           className="relative z-10 flex-1 flex flex-col justify-center px-6 py-24 sm:py-32 bg-background border-t border-border/40 scroll-mt-20"
         >
           {/* Subtle Ambient Crimson Glow */}
@@ -67,11 +71,11 @@ export default function Home() {
 
               <div className="pt-2 flex items-center gap-3">
                 <span className="font-mono text-xs tracking-wider text-accent-crimson uppercase font-medium">
-                  Phase 05
+                  Phase 06
                 </span>
                 <span className="text-border">/</span>
                 <span className="font-mono text-xs tracking-wider text-text-secondary uppercase">
-                  Featured Projects Showcase Active
+                  Achievements & Problem Solving Integrated
                 </span>
               </div>
             </div>
@@ -83,37 +87,37 @@ export default function Home() {
                 Upcoming Modules
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div id="achievements" className="p-5 border border-border/60 bg-background-elevated/40 scroll-mt-20">
+                <div className="p-5 border border-border/60 bg-background-elevated/40">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-mono text-[10px] text-accent-crimson uppercase tracking-widest">
-                      Section // 03
+                      Section // Next
                     </span>
                     <span className="font-mono text-[9px] px-1.5 py-0.5 border border-border/60 text-text-secondary/70">
                       In Queue
                     </span>
                   </div>
                   <h3 className="font-mono text-sm text-text-primary uppercase tracking-wide">
-                    Achievements
+                    Skills & Technical Stack
                   </h3>
                   <p className="text-xs text-text-secondary/70 mt-1">
-                    Competitive programming milestones and recognitions.
+                    Language proficiencies, frameworks, tools, and systems capabilities.
                   </p>
                 </div>
 
-                <div id="contact" className="p-5 border border-border/60 bg-background-elevated/40 scroll-mt-20">
+                <div className="p-5 border border-border/60 bg-background-elevated/40">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-mono text-[10px] text-accent-crimson uppercase tracking-widest">
-                      Section // 04
+                      Section // Contact
                     </span>
                     <span className="font-mono text-[9px] px-1.5 py-0.5 border border-border/60 text-text-secondary/70">
                       In Queue
                     </span>
                   </div>
                   <h3 className="font-mono text-sm text-text-primary uppercase tracking-wide">
-                    Contact & Links
+                    Communications & Inquiries
                   </h3>
                   <p className="text-xs text-text-secondary/70 mt-1">
-                    Direct communications, GitHub, and professional links.
+                    Direct communications channels, verified socials, and inquiries.
                   </p>
                 </div>
               </div>

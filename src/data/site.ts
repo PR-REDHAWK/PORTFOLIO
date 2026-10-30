@@ -33,7 +33,7 @@ export const siteConfig: SiteConfig = {
   tagline: "Engineering resilient systems and cinematic digital experiences.",
   description:
     "Developer focused on building practical web software, exploring modern systems engineering, and solving complex algorithmic challenges.",
-  status: "PHASE 5 / FEATURED PROJECTS",
+  status: "PHASE 6 / ACHIEVEMENTS ACTIVE",
   year: 2026,
   education: {
     degree: "B.Tech",
@@ -54,7 +54,7 @@ export const siteConfig: SiteConfig = {
     { label: "Home", href: "/#hero", isAvailable: true },
     { label: "About", href: "/#about", isAvailable: true },
     { label: "Projects", href: "/#projects", isAvailable: true },
-    { label: "Achievements", href: "/#achievements", isAvailable: false, tag: "Upcoming" },
+    { label: "Achievements", href: "/#achievements", isAvailable: true },
     { label: "Contact", href: "/#contact", isAvailable: false, tag: "Upcoming" },
   ],
 };
