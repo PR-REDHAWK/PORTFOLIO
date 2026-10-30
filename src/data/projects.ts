@@ -112,9 +112,9 @@ export const projectsData: Project[] = [
       docs: null,
     },
     screenshot: {
-      src: null,
+      src: "/images/sentinel-ai-dashboard.png",
       alt: "SentinelAI Real-Time Operational Dashboard and Telemetry Visualizer",
-      caption: "Real-time incident feed, anomaly telemetry scores, and causal DAG graph (Dashboard screenshot placeholder).",
+      caption: "Live incident feed, 24-hour severity trends, Socket.IO telemetry stream, and AI root cause accuracy metrics.",
     },
     engineeringChallenges: [
       "Preserving Ground-Truth Isolation: Ensuring the intelligence engine receives only raw streaming telemetry without any leaking scenario metadata from the chaos injector.",
@@ -180,9 +180,9 @@ export const projectsData: Project[] = [
       docs: null,
     },
     screenshot: {
-      src: null,
-      alt: "SecurePlay Parent Dashboard and Purchase Approval Interface",
-      caption: "Parent dashboard showing spending insights, age estimation verification, and pending purchase authorizations.",
+      src: "/images/secureplay-dashboard.png",
+      alt: "SecurePlay Parent Dashboard and AI Purchase Guard Interface",
+      caption: "Vanguard-4 active parental guard showing real-time behavior analysis, AI face scans, and instant approval triggers.",
     },
     engineeringChallenges: [
       "Ethical Biometric Privacy: Structuring age estimation algorithms to run entirely on the client, avoiding server-side storage of raw facial telemetry.",
@@ -277,9 +277,9 @@ export const projectsData: Project[] = [
       docs: "https://monsoon-forcasting.onrender.com/docs",
     },
     screenshot: {
-      src: null,
-      alt: "Monsoon Forecasting Dashboard and Advisory Matrix",
-      caption: "Interactive district-level probability curves, agro-advisory planner, and scenario simulator.",
+      src: "/images/monsoon-dashboard.png",
+      alt: "Monsoon Live Model Intelligence Radar and Regional Advisory Overview",
+      caption: "Geospatial radar, 7-day onset probability watch, regional baselines, and model consensus monitoring.",
     },
     engineeringChallenges: [
       "Probability Calibration: Applying isotonic regression to adjust raw boosting outputs so that computed risk percentages reflect real-world precipitation probabilities.",

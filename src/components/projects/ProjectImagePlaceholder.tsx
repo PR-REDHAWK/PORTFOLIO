@@ -3,7 +3,6 @@ import Image from "next/image";
 interface ProjectImagePlaceholderProps {
   title: string;
   category: string;
-  aspectRatio?: string;
   src?: string | null;
   alt: string;
   caption?: string;
@@ -13,7 +12,6 @@ interface ProjectImagePlaceholderProps {
 export function ProjectImagePlaceholder({
   title,
   category,
-  aspectRatio = "aspect-16/9",
   src,
   alt,
   caption,
@@ -21,26 +19,30 @@ export function ProjectImagePlaceholder({
 }: ProjectImagePlaceholderProps) {
   if (src) {
     return (
-      <div className={`relative overflow-hidden border border-border bg-background-elevated ${aspectRatio} ${className}`}>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover object-top"
-          sizes="(max-width: 1024px) 100vw, 1200px"
-        />
+      <figure className={`relative overflow-hidden border border-border bg-background-elevated flex flex-col ${className}`}>
+        <div className="relative w-full bg-background/50 flex items-center justify-center">
+          <Image
+            src={src}
+            alt={alt}
+            width={1800}
+            height={900}
+            className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.01]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+            priority={false}
+          />
+        </div>
         {caption && (
-          <div className="absolute bottom-0 inset-x-0 p-2.5 bg-background/90 backdrop-blur-xs border-t border-border/60 text-[10px] font-mono text-text-secondary/80">
+          <figcaption className="p-3 bg-background/90 backdrop-blur-xs border-t border-border/60 text-[11px] font-mono text-text-secondary/80 leading-relaxed">
             {caption}
-          </div>
+          </figcaption>
         )}
-      </div>
+      </figure>
     );
   }
 
   return (
     <div
-      className={`relative overflow-hidden border border-border bg-background-elevated flex flex-col justify-between p-6 sm:p-8 select-none group-hover:border-border/80 transition-colors ${aspectRatio} ${className}`}
+      className={`relative overflow-hidden border border-border bg-background-elevated aspect-16/9 flex flex-col justify-between p-6 sm:p-8 select-none group-hover:border-border/80 transition-colors ${className}`}
     >
       {/* Background Subtle Tech Grid */}
       <div
@@ -90,4 +92,3 @@ export function ProjectImagePlaceholder({
     </div>
   );
 }
-

@@ -134,7 +134,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <ProjectImagePlaceholder
               title={project.title}
               category={project.category}
-              aspectRatio="aspect-16/9 md:aspect-21/9"
               src={project.screenshot?.src}
               alt={project.screenshot?.alt || `${project.title} Interface`}
               caption={project.screenshot?.caption}
