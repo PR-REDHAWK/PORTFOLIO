@@ -2,7 +2,7 @@ import Link from "next/link";
 import { achievementsData } from "@/data/achievements";
 
 export function AchievementsSection() {
-  const { competitiveProgramming, openSource, hackathons } = achievementsData;
+  const { competitiveProgramming, hackathons } = achievementsData;
 
   return (
     <section
@@ -257,64 +257,6 @@ export function AchievementsSection() {
                     )}
                   </div>
                 )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 3. Open Source Engagements */}
-        <div className="space-y-6">
-          <div className="flex items-center justify-between pb-3 border-b border-border/60">
-            <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-accent-crimson flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-accent-crimson inline-block" />
-              Open Source Contributions
-            </h3>
-            <span className="font-mono text-[11px] text-text-secondary/60 uppercase">
-              Community Programs
-            </span>
-          </div>
-
-          <div className="border border-border bg-background-elevated p-6 sm:p-8">
-            {openSource.map((os) => (
-              <div
-                key={os.id}
-                className="flex flex-col md:flex-row md:items-center justify-between gap-6"
-              >
-                <div className="space-y-3 max-w-3xl">
-                  <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="font-mono text-xs uppercase tracking-wider px-2 py-0.5 border border-border bg-background text-accent-crimson">
-                      {os.status}
-                    </span>
-                    <span className="font-mono text-xs text-text-secondary/70">
-                      {os.year} · {os.organization}
-                    </span>
-                  </div>
-
-                  <h4 className="font-sans font-bold text-xl sm:text-2xl text-text-primary tracking-tight">
-                    {os.program}
-                  </h4>
-
-                  <p className="text-sm text-text-secondary font-light leading-relaxed">
-                    {os.description}
-                  </p>
-                </div>
-
-                <div className="flex items-center shrink-0">
-                  {os.verifiedLink ? (
-                    <a
-                      href={os.verifiedLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-xs uppercase tracking-wider px-4 py-2 border border-border hover:border-accent-crimson text-text-primary transition-colors rounded-[1px]"
-                    >
-                      Verify Contribution ↗
-                    </a>
-                  ) : (
-                    <span className="font-mono text-[11px] text-text-secondary/50 uppercase tracking-widest px-3 py-1.5 border border-border/40 bg-background/50">
-                      GSSoC &apos;25 Selection Verified
-                    </span>
-                  )}
-                </div>
               </div>
             ))}
           </div>

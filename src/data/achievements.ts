@@ -22,17 +22,6 @@ export interface CompetitivePlatform {
   statusLabel: string;
 }
 
-export interface OpenSourceProgram {
-  id: string;
-  program: string;
-  role: string;
-  year: number;
-  organization: string;
-  description: string;
-  status: string;
-  verifiedLink: string | null;
-}
-
 export interface HackathonEvent {
   id: string;
   title: string;
@@ -48,7 +37,6 @@ export interface HackathonEvent {
 
 export interface AchievementsData {
   competitiveProgramming: CompetitivePlatform[];
-  openSource: OpenSourceProgram[];
   hackathons: HackathonEvent[];
 }
 
@@ -99,20 +87,6 @@ export const achievementsData: AchievementsData = {
       ],
       profileUrl: null, // Profile link can be added here (e.g. "https://www.codechef.com/users/username")
       statusLabel: "Historical Record",
-    },
-  ],
-
-  openSource: [
-    {
-      id: "gssoc-2025",
-      program: "GirlScript Summer of Code 2025",
-      role: "Selected Contributor",
-      year: 2025,
-      organization: "GirlScript Foundation",
-      description:
-        "Selected as a contributor for GSSoC '25, engaging in real-world collaborative open-source workflows, codebase reviews, and issue solving.",
-      status: "Selected Contributor",
-      verifiedLink: null, // Link to contributor profile or certificate when available
     },
   ],
 

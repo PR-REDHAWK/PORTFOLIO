@@ -4,6 +4,7 @@ import { ShrineHero } from "@/components/intro/ShrineHero";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { AchievementsSection } from "@/components/sections/AchievementsSection";
+import { SkillsSection } from "@/components/skills/SkillsSection";
 import { siteConfig } from "@/data/site";
 
 export default function Home() {
@@ -24,7 +25,10 @@ export default function Home() {
         {/* Section 03: Achievements & Competitive Programming (Section ID: achievements) */}
         <AchievementsSection />
 
-        {/* Section 04 Foundation & Contact Placeholder (Section ID: contact) */}
+        {/* Section 04: The Arsenal — Technical Stack & Exploring (Section ID: skills) */}
+        <SkillsSection />
+
+        {/* Upcoming Foundation / Contact Section (Section ID: contact) */}
         <section
           id="contact"
           className="relative z-10 flex-1 flex flex-col justify-center px-6 py-24 sm:py-32 bg-background border-t border-border/40 scroll-mt-20"
@@ -71,11 +75,11 @@ export default function Home() {
 
               <div className="pt-2 flex items-center gap-3">
                 <span className="font-mono text-xs tracking-wider text-accent-crimson uppercase font-medium">
-                  Phase 06
+                  Phase 07
                 </span>
                 <span className="text-border">/</span>
                 <span className="font-mono text-xs tracking-wider text-text-secondary uppercase">
-                  Achievements & Problem Solving Integrated
+                  The Arsenal Active
                 </span>
               </div>
             </div>
@@ -84,26 +88,9 @@ export default function Home() {
             <div className="mt-16 pt-12 border-t border-border/30">
               <p className="font-mono text-[11px] text-text-secondary uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-accent-crimson inline-block" />
-                Upcoming Modules
+                Upcoming Module
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-5 border border-border/60 bg-background-elevated/40">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] text-accent-crimson uppercase tracking-widest">
-                      Section // Next
-                    </span>
-                    <span className="font-mono text-[9px] px-1.5 py-0.5 border border-border/60 text-text-secondary/70">
-                      In Queue
-                    </span>
-                  </div>
-                  <h3 className="font-mono text-sm text-text-primary uppercase tracking-wide">
-                    Skills & Technical Stack
-                  </h3>
-                  <p className="text-xs text-text-secondary/70 mt-1">
-                    Language proficiencies, frameworks, tools, and systems capabilities.
-                  </p>
-                </div>
-
+              <div className="max-w-md">
                 <div className="p-5 border border-border/60 bg-background-elevated/40">
                   <div className="flex items-center justify-between mb-2">
                     <span className="font-mono text-[10px] text-accent-crimson uppercase tracking-widest">
