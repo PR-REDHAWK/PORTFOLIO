@@ -69,15 +69,14 @@ export const siteConfig: SiteConfig = {
       {
         platform: "LinkedIn",
         label: "LinkedIn",
-        url: null, // Configurable placeholder: e.g. "https://www.linkedin.com/in/priyanshu-panwar"
-        username: "Priyanshu Panwar",
-        isAvailable: false,
-        note: "Profile link on request",
+        url: "https://www.linkedin.com/in/priyanshu-panwar098/",
+        username: "priyanshu-panwar098",
+        isAvailable: true,
       },
     ],
     resume: {
-      path: "/resume.pdf",
-      isAvailable: false, // Set to true once public/resume.pdf is provided
+      path: "/Priyanshu_Panwar_Resume.pdf",
+      isAvailable: true,
     },
   },
   education: {
